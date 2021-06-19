@@ -1,3 +1,5 @@
+*written by PeterAlbus，Copyright © 2021 - SHOU 1951123 Hong Wu*
+
 # 第1-2章 绪论
 
 ### 1.算法基本概念及5个特性
