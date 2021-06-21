@@ -1,3 +1,5 @@
+*written by PeterAlbus，Copyright © 2021 - SHOU 1951123 Hong Wu*
+
 # 第二章 MATLAB入门
 
 + 变量
