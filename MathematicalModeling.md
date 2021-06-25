@@ -3,7 +3,7 @@
 # 第二章 MATLAB入门
 
 + 变量
-+ 特殊变量：ans pi eps flops inf Nan ...
++ 特殊变量：ans pi eps flops inf NaN ...
 + 数学符号：+ - * / .*(点乘) ./(点除) ^(幂) \\(左除)
 
 + 数学函数：sin abs sqrt ...
@@ -260,6 +260,8 @@ $$
   f=F(x);
   ```
 
+  
+
 + 若约束条件中有非线性约束，则建立nonlcon.m定义函数G(X)与Ceq(X)：
 
   ```matlab
@@ -278,6 +280,8 @@ $$
   x=fmincon('fun',X0,A,b,Aeq,beq,VLB,VUB,'nonlcon',options)
   [x,fval,exitflag,output]=fmincon(...)
   ```
+  
+  
 
 p53例1
 
