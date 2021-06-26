@@ -15,9 +15,13 @@
 
 ---
 
-6月26日：操作系统笔记已更新，添加了目录，点击目录即可展开，推荐使用电脑查看
+6月26日12:00：操作系统笔记已更新，添加了目录，点击目录即可展开，推荐使用电脑查看
 
-目录的生成在[(4条消息) typora生成html添加侧边目录/typora侧边栏与正文,toc都带序号_酒逢知己千杯少,欢迎驾临-CSDN博客_typora导出html带大纲](https://blog.csdn.net/u012914436/article/details/99679320)的基础上修改
+目录的生成在[typora生成html添加侧边目录/typora侧边栏与正文,toc都带序号_酒逢知己千杯少,欢迎驾临-CSDN博客_typora导出html带大纲](https://blog.csdn.net/u012914436/article/details/99679320)的基础上修改
+
+---
+
+6月26日23:00：计算机组成原理笔记完成！本学期的复习笔记全部完成，也都部署到了服务器上以便于查看。计组的笔记同样添加了目录。部署到网页上的操作系统的笔记采用了gitbook的主题，计组笔记则用的vue主题
 
 ---
 
@@ -29,7 +33,13 @@
 
   点击在网页上查看：[ComputerOS](http://47.117.160.245:8080/ComputerOS.html)
 
++ **计算机组成原理笔记**: ComputerOrganization.md
+
+  点击在网页上查看：[ComputerOrganization](http://47.117.160.245:8080/ComputerOrganization.html)
+
 + **算法基础笔记**：FundamentalsOfAlgorithmics.md
+
+  点击在网页上查看：[FundamentalsOfAlgorithmics](http://47.117.160.245:8080/FundamentalsOfAlgorithmics.html)
 
 + **数学建模笔记**：MathematicalModeling.md
 
