@@ -13,11 +13,21 @@
 
 其余完成度较低笔记上传.md文件，需自行使用markdown阅读器查看。
 
+---
+
+6月26日：操作系统笔记已更新，添加了目录，点击目录即可展开，推荐使用电脑查看
+
+目录的生成在[(4条消息) typora生成html添加侧边目录/typora侧边栏与正文,toc都带序号_酒逢知己千杯少,欢迎驾临-CSDN博客_typora导出html带大纲](https://blog.csdn.net/u012914436/article/details/99679320)的基础上修改
+
+---
+
 + **数据库笔记**：Database.md
 
-  在网页上查看：[Database](http://47.117.160.245:8080/database.html)
+  点击在网页上查看：[Database](http://47.117.160.245:8080/database.html)
 
 + **操作系统笔记**：ComputerOS.md
+
+  点击在网页上查看：[ComputerOS](http://47.117.160.245:8080/ComputerOS.html)
 
 + **算法基础笔记**：FundamentalsOfAlgorithmics.md
 
