@@ -1,41 +1,23 @@
-# Peter Albus‘s Notes
-### 部署到tomcat上的笔记链接：
+# Peter Albus’ Notes
 
-+ **汇编笔记**：AssemblyLanguage.md
-
-  点击在网页上查看：[Assembly Language (peteralbus.com)](https://www.peteralbus.com:8440/AssemblyLanguage.html)
-
-+ **计算机网络笔记**：ComputerNetwork.md
-
-  点击在网页上查看：[Computer Network (peteralbus.com)](https://www.peteralbus.com:8440/ComputerNetwork.html)
-
-+ **数据库笔记**：Database.md
-
-  点击在网页上查看：[Database (peteralbus.com)](http://www.peteralbus.com:8080/database.html)
-
-+ **操作系统笔记**：ComputerOS.md
-
-  点击在网页上查看：[ComputerOS (peteralbus.com)](http://www.peteralbus.com:8080/ComputerOS.html)
-
-+ **计算机组成原理笔记**: ComputerOrganization.md
-
-  点击在网页上查看：[ComputerOrganization (peteralbus.com)](http://www.peteralbus.com:8080/ComputerOrganization.html)
-
-+ **算法基础笔记**：FundamentalsOfAlgorithmics.md
-
-  点击在网页上查看：[FundamentalsOfAlgorithmics (peteralbus.com)](http://www.peteralbus.com:8080/FundamentalsOfAlgorithmics.html)
-
-+ **数学建模笔记**：MathematicalModeling.md
-
-  在网页上查看：[MathematicalModeling (peteralbus.com)](http://www.peteralbus.com:8080/MathematicalModeling.html)
-
-
-
-所有笔记都在GitHub仓库内有.md文件，可自行下载使用markdown阅读器查看。
+所有笔记都在GitHub仓库内有.md文件，可自行下载使用markdown阅读器查看或转换成PDF等其他格式，使用以及传播时保证保留最上方的版权信息即可。
 
 https://github.com/PeterAlbus/PeterAlbusNotes
 
-changelog：
+### 部署到tomcat上的笔记链接：
+
++ **软件工程笔记**：[SoftwareEngineering (peteralbus.com)](https://www.peteralbus.com:8440/SoftwareEngineering.html)
++ **汇编笔记**：[Assembly Language (peteralbus.com)](https://www.peteralbus.com:8440/AssemblyLanguage.html)
++ **计算机网络笔记**：[Computer Network (peteralbus.com)](https://www.peteralbus.com:8440/ComputerNetwork.html)
++ **数据库笔记**：[Database (peteralbus.com)](http://www.peteralbus.com:8080/database.html)
++ **操作系统笔记**：[ComputerOS (peteralbus.com)](http://www.peteralbus.com:8080/ComputerOS.html)
++ **计算机组成原理笔记**: [ComputerOrganization (peteralbus.com)](http://www.peteralbus.com:8080/ComputerOrganization.html)
++ **算法基础笔记**：[FundamentalsOfAlgorithmics (peteralbus.com)](http://www.peteralbus.com:8080/FundamentalsOfAlgorithmics.html)
++ **数学建模笔记**：[MathematicalModeling (peteralbus.com)](http://www.peteralbus.com:8080/MathematicalModeling.html)
+
+## changelog：
+
+2022年1月8日16:00：完成了软件工程笔记：[SoftwareEngineering (peteralbus.com)](https://www.peteralbus.com:8440/SoftwareEngineering.html)，大三下的笔记整理也结束了
 
 ---
 
