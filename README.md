@@ -17,6 +17,11 @@
 
 ## changelog：
 
+
+2023年1月29日：vuepress驱动，大幅提升阅读和查询体验。
+
+---
+
 2022年1月10日：重新用nginx完成了部署，现在所有域名都可通过note.peteralbus.com访问
 
 ---

@@ -1,2 +1,5 @@
-/imgs
-/html
+/markdown/imgs
+/markdown/html
+node_modules
+/.idea/
+/docs/.vuepress/dist/

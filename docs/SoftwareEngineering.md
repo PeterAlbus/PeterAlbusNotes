@@ -49,20 +49,22 @@
 
 ##### 1.1.3 软件危机
 
+> ***软件危机*是指落后的软件生产方式无法满足迅速增长的计算机软件需求，从而导致软件开发与维护过程中出现一系列严重问题的现象。**
+
 随着计算机应用的逐步扩大，软件的需求量也迅速增加，规模日益增长。开发一个数万乃至于数百万行的代码，其复杂度将会大大增加。这导致大型软件的开发费用往往超出预算，完成时间也常常脱期。庞大的软件费用和软件质量的下降对计算机应用的继续扩大构成了巨大的威胁。面对这种严峻的形势，软件界一些有识之士提出了软件危机的警告。
 
 软件危机出现的原因有维护和生产两个方面：
 
 + 软件维护费用急剧上升，直接威胁计算机应用的扩大
-+ 软件生产技术进步缓慢，是加剧软件危机的重要原因——许多人士意识到必须把软件生产从个人化方式改编为工程化方式
++ 软件生产技术进步缓慢，是加剧软件危机的重要原因——许多人士意识到必须把软件生产从个人化方式改变为工程化方式
 
 #### 1.2 软件工程学的范畴
 
-“软件工程”一次，是1968年北大西洋公约组织（NATO）在联邦德国召开的一次会议上提出的。它反映了软件人员认识到软件危机的出现，以及为谋求解决这一危机而做的一种努力。
+“软件工程”一词，是1968年北大西洋公约组织（NATO）在联邦德国召开的一次会议上提出的。它反映了软件人员认识到软件危机的出现，以及为谋求解决这一危机而做的一种努力。
 
 软件工程有着各种各样的定义。无论多少种说法，它的中心思想都是**把软件当作一种工业产品，要求“采用工程化的原理与方法对软件进行计划、开发和维护”**。
 
-![image-20220106153429172](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106153429172.png)
+![image-20220106153429172](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106153429172.png)
 
 ##### 1.2.3 软件工程环境
 
@@ -78,23 +80,23 @@
 
 1. 过程式编程范型
 
-   过程式编程范型遵循“程序=数据结构+算法”的思路，把程序理解为由一组被动的数据和一组能动的过程组成。编程时，先设计数据结构，在围绕数据结构编写其算法过程。
+   过程式编程范型遵循“程序=数据结构+算法”的思路，把程序理解为由一组被动的数据和一组能动的过程组成。编程时，先设计数据结构，再围绕数据结构编写其算法过程。
 
    典型：FORTRAN、Pascal、C
 
    由于客观事物中，实体的“状态”(数据)和"运动"(方法)总是结合在一起的，但使用POPL(面向过程编码语言，procedure-oriented programming langue)编程时，数据结构和算法是独立的，导致程序模型（解空间，solution domain）会偏离客观事物本身的模型（问题空间，problem domain），程序规模越大，这种编程泛型的缺陷更加明显。
 
-   这类范型通常只用于编写规模不大(50000行一下)，不会轻易更改的程序
+   这类范型通常只用于编写规模不大(50000行以下)，不会轻易更改的程序
 
 2. 面向对象编程范型
 
-   在面向对象的程序设计中，数据及其操作被封装在一个个称为对象(object)的统一体种，对象之间则通过消息(message)相互联系，"对象+消息"的机制取代了"数据结构+算法"的思路。较好地实现了解空间和问题空间的一致性。
+   在面向对象的程序设计中，数据及其操作被封装在一个个称为对象(object)的统一体中，对象之间则通过消息(message)相互联系，"对象+消息"的机制取代了"数据结构+算法"的思路。较好地实现了解空间和问题空间的一致性。
 
    面向过程到面向对象程序设计(object-oriented programming, OOP)是程序设计方法的一次飞跃。
 
    面向对象编程泛型的优势也体现在软件的维护上，能够使得大型软件的维护更加容易和快捷。
 
-3. 已于构件技术的编程泛型
+3. 基于构件技术的编程泛型
 
    构建(component,也译为组件)可以理解为标准化的对象类，它本质上是一种通用的，可支持不同应用程序的组件。
 
@@ -105,8 +107,8 @@
    常用编程粒度的大小来比较3种编程范型的差异。
 
    + 过程式编程范型：着眼于程序的过程和基本控制结构，粒度最小
-   + 面向对象编程泛型：着眼于程序中的对象，粒度比较大
-   + 基于构件技术的编程范型：着眼于适合整个领域的类对象，力度更大
+   + 面向对象编程范型：着眼于程序中的对象，粒度比较大
+   + 基于构件技术的编程范型：着眼于适合整个领域的类对象，粒度更大
 
 ##### 1.3.2 三代软件工程
 
@@ -130,7 +132,12 @@
 
 一个软件从开始立项起，到废弃不用止，统称为软件的生存周期(life cycle)。
 
-![image-20220106161809030](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106161809030.png)
+软件生存周期分为三个时期八个阶段：
+
++ 三个时期：软件定义、软件开发、软件维护
++ 八个阶段：问题定义、可行性研究（可行性研究报告）、需求分析（软件需求规格说明书）、概要设计、详细设计、编码和单元测试、综合测试、运行维护
+
+![image-20220106161809030](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106161809030.png)
 
 ##### 2.1.1 软件生存周期的主要活动
 
@@ -140,7 +147,7 @@
 
 2. 软件分析
 
-   软件分析的任务是在系统需求模型的基础上，从开发人员的视角对软件的需求模型进行分析，建立与需求模型一致的，与实现无关的软件分析模型。它是对软件逻辑模型的描述，也是下一步进行软件设计的依据
+   软件分析的任务是在系统需求模型的基础上，从开发人员的视角对软件的需求模型进行分析，建立与需求模型一致的，与实现无关的软件分析模型。它是对软件逻辑模型的描述，也是下一步进行软件设计的依据。
 
 3. 软件设计
 
@@ -170,7 +177,7 @@
 
 1. 从软件生存周期到过程模型
 
-   软件过程可理解为围绕软件开发所进行的一系列活动。早些时候，人们常常把软件过程称为“软件开发模型”(software development model)。著名的瀑布模型(waterfall model)是神棍周期和软件过程的研究互相结合的一个早期实例。
+   软件过程可理解为围绕软件开发所进行的一系列活动。早些时候，人们常常把软件过程称为“软件开发模型”(software development model)。著名的瀑布模型(waterfall model)是生存周期和软件过程的研究互相结合的一个早期实例。
 
    早期的软件工程，软件开发模型包含的阶段与活动和软件生存周期划分的阶段与活动基本一致。上图显示的典型软件生存周期，也可以用来展示典型瀑布模型的阶段与活动，二者都属于线性模型，且具有等同性。它们共同特点是严格地划分阶段，各阶段的活动分步完成，前一阶段的活动没有结束，下一阶段的活动就不能进行，恰如奔流不息，拾级而下的瀑布。
 
@@ -182,7 +189,7 @@
 
 ##### 2.2.1 瀑布模型
 
-![image-20220106165027990](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106165027990.png)
+![image-20220106165027990](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106165027990.png)
 
 瀑布模型是基于软件生存周期的线性开发模型，有如下特点：
 
@@ -192,7 +199,7 @@
 
 + 推迟实现的观点
 
-  不要过早的进行编码，把开发软件的逻辑设计和物理实现清晰的区别开来。不要过早考虑实现。
+  不要过早地进行编码，把开发软件的逻辑设计和物理实现清晰地区别开来。不要过早考虑实现。
 
 + 保证质量
 
@@ -200,11 +207,11 @@
 
   每一阶段都要对完成的文档进行复审
 
-按照瀑布模型开发软件，需要分析员能够做出准确的需求分析，“在软件产品的某个版本试用之前，要用户完全、正确的对一个现代软件产品提出确切的需求，实际上是不可能的”——F. Brooks。为了解决这一问题，人们提出了快速原型模型。
+按照瀑布模型开发软件，需要分析员能够做出准确的需求分析，“在软件产品的某个版本试用之前，要用户完全、正确地对一个现代软件产品提出确切的需求，实际上是不可能的”——F. Brooks。为了解决这一问题，人们提出了快速原型模型。
 
 ##### 2.2.2 快速原型模型
 
-![image-20220106165620467](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106165620467.png)
+![image-20220106165620467](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106165620467.png)
 
 **快速原型模型**(rapid prototype model)的中心思想是，先建立一个能够反映用户主要需求的原型；让用户实际看一下未来系统的概貌，以便判断哪些功能是符合需要的，哪些方面还需要改进，之后将原型反复改进。直至符合用户要求。
 
@@ -222,7 +229,7 @@
 
 增量模型(incremental model)是瀑布模型的顺序特征与快速原型法的迭代特征相结合的产物。这种模型把软件看作一系列相互联系的增量(increments)，开发迭代中每次完成一个增量。
 
-![image-20220106174736343](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106174736343.png)
+![image-20220106174736343](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106174736343.png)
 
 其中任意一个增量的开发流程均可按瀑布模型或快速原型法完成。
 
@@ -232,7 +239,7 @@
 
 螺旋模型(spiral model)是目前软件开发中最常用的一种软件开发模型，是在结合瀑布模型与快速原型模型基础上演变而成的，尤其适用于大型软件的开发。
 
-![image-20220106175129479](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106175129479.png)
+![image-20220106175129479](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106175129479.png)
 
 螺旋模型是一种典型的迭代模型，每迭代一次，螺旋线前进一周。
 
@@ -245,15 +252,15 @@
 
 软件开发时存在着风险。对于高风险的大型软件，螺旋模型较为理想，螺旋模型任意一次迭代均可应用原型方法降低风险，总体上保留了瀑布模型的顺序性。
 
-螺旋模型的特点就是在项目个阶段都考虑风险。螺旋模型开发的成败，在很大程度上依赖于风险评估的准确性。
+螺旋模型的特点就是在项目各阶段都考虑风险。螺旋模型开发的成败，在很大程度上依赖于风险评估的准确性。
 
-##### 2.2.3 构建集成模型
+##### 2.3.3 构件集成模型
 
 上述软件开发模型同时适用于面向过程和面向对象软件开发。构建集成模型则主要适用于面向对象软件开发。
 
 构建集成模型利用预先封装好的构建来构造应用系统，它融合了螺旋模型的不少特征，也支持软件开发的迭代方法。
 
-![image-20220106180707307](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106180707307.png)
+![image-20220106180707307](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106180707307.png)
 
 #### 2.4 形式化方法模型
 
@@ -283,7 +290,7 @@
 
 #### 2.6 软件可行性研究
 
-确定开发是否指定进行，分析它存在哪些风险。
+确定开发是否值得进行，分析它存在哪些风险。
 
 ### 第三章 结构化分析与设计
 
@@ -297,7 +304,7 @@
 
 分为结构化设计(structured design, SD)和结构化分析(structured analysis, SA)技术。
 
-作为一种系统化开发方法，机构化分析与设计是瀑布模型的首次实践。该模型一般分为如下阶段
+作为一种系统化开发方法，结构化分析与设计是瀑布模型的首次实践。该模型一般分为如下阶段
 
 需求定义与分析→总体设计→详细设计→编码→测试→使用维护
 
@@ -319,9 +326,9 @@
 
   + 结构化设计
 
-    软件设计-总体设计+详细设计。SD阶段把分析模型中的DFD图转换成SC图，完成了总体设计。随后的详细设计中，还需要用适当的工具对各个模块采用的算法和数据结构做适当的描述。
+    软件设计=总体设计+详细设计。SD阶段把分析模型中的DFD图转换成SC图，完成了总体设计。随后的详细设计中，还需要用适当的工具对各个模块采用的算法和数据结构做适当的描述。
 
-  ![image-20220106184458971](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106184458971.png)
+  ![image-20220106184458971](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106184458971.png)
 
 ##### 3.1.2 SA模型的组成与描述
 
@@ -329,7 +336,7 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
 1. SA模型的组成
 
-   ![image-20220106184813675](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106184813675.png)
+   ![image-20220106184813675](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106184813675.png)
 
    下图显示了SA模型的组成，**数据字典**(data dictionary, DD)处于模型的核心，它是系统涉及的各种数据对象的总和。从DD出发可以构建
 
@@ -337,7 +344,7 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
    + **数据流图**（data flow diagram，DFD），指明系统间数据如何流动和变换，DFD图的每个功能用**加工规格说明**(process specification, PSPEC)描述
    + **状态变换图**（status transform diagram，STD），指明系统在外部事件的作用下如何动作。软件控制方面的附加信息还可以用**控制规格说明**（control specification，CSPEC）描述
 
-   ![image-20220106190325200](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106190325200.png)
+   ![image-20220106190325200](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106190325200.png)
 
 2. SA模型描述工具
 
@@ -345,21 +352,21 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
      使用四种基本图形符号，圆框代表加工，箭头代表数据流向，方框表示数据源点和终点，双杠表示数据文件或数据库。DFD不能表示程序的控制结构。
 
-     ![image-20220106190624683](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106190624683.png)
+     ![image-20220106190624683](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106190624683.png)
 
    + 数据字典
 
      对软件中的每个数据规定一个定义条目
 
-     ![image-20220106190748505](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106190748505.png)
+     ![image-20220106190748505](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106190748505.png)
 
    + 加工规格说明
 
      常用结构化语言、判定表或判定树作为描述工具
 
-     ![image-20220106190834055](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106190834055.png)
+     ![image-20220106190834055](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106190834055.png)
 
-     ![image-20220106190852955](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106190852955.png)
+     ![image-20220106190852955](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106190852955.png)
 
 ##### 3.1.3 SD模型的组成与描述
 
@@ -367,7 +374,7 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
    SD模型由SA模型映射而来，SA的数据字典可转换为数据设计，数据流图可转换为体系结构设计（SC图）和接口设计，加工规格说明可转换为模块内部的详细过程设计。
 
-   ![image-20220106191509219](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106191509219.png)
+   ![image-20220106191509219](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106191509219.png)
 
 2. SD模型的描述工具
 
@@ -375,11 +382,11 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
    SC图由六种模块组成
 
-   ![image-20220106191820794](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106191820794.png)
+   ![image-20220106191820794](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106191820794.png)
 
    SC图的模块调用分为简单调用、选择调用和循环调用
 
-   ![image-20220106191906521](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106191906521.png)
+   ![image-20220106191906521](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106191906521.png)
 
 #### 3.2 结构化系统分析
 
@@ -391,17 +398,17 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
 大型系统DFD含有数百甚至数千个加工，不可能一次将其画完。需要从系统的基本功能模型（整个系统作为一个加工），逐层的对系统进行分解。没分解一次，系统的加工数量就会多一些，加工也更具体一点。直到加工不能再分解，这种称为基本加工。以下为逐步分解的一个例子：
 
-![image-20220106192438563](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106192438563.png)
+![image-20220106192438563](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106192438563.png)
 
-![image-20220106192446616](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106192446616.png)
+![image-20220106192446616](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106192446616.png)
 
-![image-20220106192500229](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106192500229.png)
+![image-20220106192500229](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106192500229.png)
 
 分层DFD可以避免一次引入过多细节，此外可以让不同业务人员之阅读与本身有关的图形而不必阅读总图。
 
 ##### 3.2.2 确定数据定义与加工策略
 
-分层DFD图确定了系统的全部数据和加工。之后从DFD图的终点一步步向远点开始会输，写出加工规格说明和数据字典，发现问题时对DFD图进行修正。最终生成一个一致统一的文档——SRS。
+分层DFD图确定了系统的全部数据和加工。之后从DFD图的终点一步步向源点开始绘制，写出加工规格说明和数据字典，发现问题时对DFD图进行修正。最终生成一个一致统一的文档——SRS。
 
 ##### 3.2.3 需求分析的复审
 
@@ -415,7 +422,7 @@ SA模型通过现实环境得出的具体模型→当前系统模型→目标系
 
 软件设计分为面向数据流设计(SD)方法和面向数据设计(Jackson方法)两大类，后者已基本过时。
 
-![image-20220106193612308](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106193612308.png)
+![image-20220106193612308](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106193612308.png)
 
 ##### 3.3.2 从DFD图到SC图
 
@@ -425,11 +432,11 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 
 变换型结构由传入路径，变换中心和传出路径三部分组成
 
-![image-20220106193939891](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106193939891.png)
+![image-20220106193939891](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106193939891.png)
 
-事务性结构则由一条接收路径，一个事务中心与若干条动作路径组成。一个事务中心获得某一特定值，就能启动某一条动作路径的操作。
+事务型结构则由一条接收路径，一个事务中心与若干条动作路径组成。一个事务中心获得某一特定值，就能启动某一条动作路径的操作。
 
-要从DFD图映射到SC图，需要先鉴别是变换型还是事务性（也可能同时存在两类结构）
+要从DFD图映射到SC图，需要先鉴别是变换型还是事务型（也可能同时存在两类结构）
 
 然后通过变换映射将变换型DFD图转换为初始SC图
 
@@ -438,7 +445,7 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 ##### 3.3.3 变换映射
 
 + 划分DFD图的边界
-![image-20220106193948803](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106193948803.png)
+![image-20220106193948803](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106193948803.png)
 
 + 建立初始SC图的框架
 
@@ -446,9 +453,9 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 
 + 将第一层分为传入模块、变换模块和传出模块，之后再对其进行分解
 
-  ![image-20220106194834531](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106194834531.png)
+  ![image-20220106194834531](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106194834531.png)
 
-  ![image-20220106194841031](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106194841031.png)
+  ![image-20220106194841031](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106194841031.png)
 
 + 最终合并在一起，形成初始SC图
 
@@ -458,7 +465,7 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 + 画出SC图框架，把三个部分映射为事务控制模块，接收模块和动作发送模块
 + 分解细化接收分支和发送分支，完成初始SC图。
 
-![image-20220106195543043](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106195543043.png)
+![image-20220106195543043](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106195543043.png)
 
 ##### 3.3.5  优化初始SC图的指导规则
 
@@ -470,9 +477,9 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 
   扇入高则上级模块多，能够增加模块利用率，扇出低表示下级模块少，可以减少模块调用和控制的复杂度。可以用增加中间层的方式减小扇出，煎饼形一般是不可取的。
 
-  ![image-20220106200205895](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106200205895.png)
+  ![image-20220106200205895](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106200205895.png)
 
-  翁型结构是最理想的结构。但这种结构往往比较难追求，大量中间模块都服用了下级模块，这是非常难做到的。
+  瓮型结构是最理想的结构。但这种结构往往比较难追求，大量中间模块都复用了下级模块，这是非常难做到的。
 
 #### 3.4 模块设计
 
@@ -497,7 +504,7 @@ DFD数据流图分为变换型结构和事务型结构两种类型
 ##### 3.4.3 常用的表达工具
 
 + 流程图和N-S图：
-![image-20220106202530125](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106202530125.png)
+![image-20220106202530125](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106202530125.png)
 + 伪代码和PDL语言
 
 ## 中篇 面向对象软件工程
@@ -547,7 +554,7 @@ UML是一种基于面向对象的可视化建模语言。提供了丰富的以�
 
    UML定义了两类模型元素，一类模型元素用于表示模型中的某个概念，如类、对象、构件、用例、结点(node)、接口、包和注释等，另一类用于表示模型间相互联系的关系，关系主要有关联、泛化、依赖、实现、聚集和组合。
 
-   ![image-20220106204433533](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106204433533.png)
+   ![image-20220106204433533](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106204433533.png)
 
    几种主要连接关系的含义——对于这六种连接关系，需要了解其对应图示和对应的代码表示：
 
@@ -556,11 +563,11 @@ UML是一种基于面向对象的可视化建模语言。提供了丰富的以�
    + 依赖(dependency):一个元素依赖于另一个元素，为短暂性关系。
    + 实现(realization):表示接口和实现它的模型之间的关系。**代码中表现为虚函数的实现。**
    + 聚集(aggregation):整体与部分，例如鸟聚集形成鸟群
-   + 组合(composition):强烈的整体与部分，例如轮胎是车的一部分
+   + 组合(composition):强烈的整体与部分，例如轮胎是车的一部分，轮胎组合而形成车
 
 2. UML的元模型结构
 
-   ![image-20220106204915314](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106204915314.png)
+   ![image-20220106204915314](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106204915314.png)
 
    + 元元模型(meta-meta model)：任何模型的基础，概念非常难解释，或许可以理解为元模型的抽象
 
@@ -568,11 +575,11 @@ UML是一种基于面向对象的可视化建模语言。提供了丰富的以�
 
    + 模型(model)：是对现实世界（问题领域/解决方案）的抽象
 
-     ![image-20220106205355420](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106205355420.png)
+     ![image-20220106205355420](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106205355420.png)
 
    + 用户模型(user model)：模型的实例，用于表达一个模型的特殊情况
 
-     ![image-20220106205543492](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106205543492.png)
+     ![image-20220106205543492](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106205543492.png)
 
 3. 图和视图
 
@@ -609,11 +616,11 @@ UML的静态建模机制包括用例图、类图和对象图
 用例模型由一组用例图构成，其基本组成部件是用例、参与者和系统。用例图可以描述软件系统和外部参与者(actor)之间的监护，一个用例代表从外部可见的系统的一个功能。
 
 1. 组成符号
-    ![image-20220106210606706](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106210606706.png)
+    ![image-20220106210606706](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106210606706.png)
 
 2. 建立用例图
 
-  ![image-20220106210704774](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106210704774.png)
+  ![image-20220106210704774](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106210704774.png)
 
 3. 用例之间的关系
 
@@ -627,7 +634,7 @@ UML的静态建模机制包括用例图、类图和对象图
 
      一个用例的行为包含另一个用例的行为。
 
-   ![image-20220106211825165](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106211825165.png)
+   ![image-20220106211825165](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106211825165.png)
 
 ##### 4.3.2 类图和对象图
 
@@ -637,7 +644,7 @@ UML的静态建模机制包括用例图、类图和对象图
 
    类图描述同类对象的属性和形为，类图可表示类和类之间的关系，在UML中，类一般表示为一个划分成3格的矩形框，下面的两格可以进行省略。第一格指定类的名字。第二格为类的属性，第三格为类的操作。
 
-   ![image-20220106212259920](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106212259920.png)
+   ![image-20220106212259920](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106212259920.png)
 
    类种表示属性的语法为：可见性 属性名:类型 = 默认值(约束特性)
 
@@ -651,27 +658,27 @@ UML的静态建模机制包括用例图、类图和对象图
 
    + 普通关联：最常见的关联，两个类之间用一条直线连接
 
-     ![image-20220106213007165](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213007165.png)
+     ![image-20220106213007165](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213007165.png)
 
      关联的两端可以协商一个被称为重数的数值范围
 
-     ![image-20220106213015327](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213015327.png)
+     ![image-20220106213015327](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213015327.png)
 
    + 递归关联：一个类和自身关联
 
-     ![image-20220106213047926](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213047926.png)
+     ![image-20220106213047926](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213047926.png)
 
    + 多重关联：两个以上的类之间互相关联
 
-     ![image-20220106213217305](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213217305.png)
+     ![image-20220106213217305](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213217305.png)
 
    + 有序关联：在多的关联端的对象可以是一个无序集合，如果该集合有序，可以加上{ordered}来指明
 
-     ![image-20220106213224640](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213224640.png)
+     ![image-20220106213224640](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213224640.png)
 
    + 限制关联：用于一对多或多对多的关联，将一端的多通过**限制子**简化为1
 
-     ![image-20220106213331823](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220106213331823.png)
+     ![image-20220106213331823](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220106213331823.png)
 
    + 或关联：例如房产只能归属于个人或公司中的一方
 
@@ -686,7 +693,7 @@ UML的静态建模机制包括用例图、类图和对象图
    1. 聚集：“部分”对象可以是“整体”对象的一部分。
    2. 组合：“整体”强烈拥有部分。
 
-![image-20220108080030986](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108080030986.png)
+![image-20220108080030986](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108080030986.png)
 
 4. 泛化
 
@@ -696,7 +703,7 @@ UML的静态建模机制包括用例图、类图和对象图
 
    + 一般元素所具有的关联、属性和操作。特殊元素也都隐含性地具有。
    + 特殊元素应包含额外信息。
-   + 允许使用特殊元素实例地地方，也应能使用一般元素。
+   + 允许使用特殊元素实例的地方，也应能使用一般元素。
 
    1. 普通泛化
 
@@ -718,7 +725,7 @@ UML的静态建模机制包括用例图、类图和对象图
 
    约束和派生一般用花括号括起来放在模型元素旁边，或者用圆括号括起来以注释的方式与模型元素相连。
 
-   ![image-20220108083126972](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108083126972.png)
+   ![image-20220108083126972](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108083126972.png)
 
 ##### 4.3.3 包
 
@@ -734,7 +741,7 @@ UML不仅能够描述系统静态结构，也提供了描述系统动态行为�
 
 UML中，用带有箭头的线段将消息的发送者和接收者联系起来，箭头的类型表示消息的类型：
 
-<img src="https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108084143350.png" alt="image-20220108084143350" style="zoom:150%;" />
+<img src="https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108084143350.png" alt="image-20220108084143350" style="zoom:150%;" />
 
 1. 简单消息(simple message):表示简单的控制流。用于描述控制是如何在对象间进行传递的，而不考虑通信的细节。
 2. 同步消息(synchronous message):表示嵌套的控制流。操作的调用是一种典型的同步消息。调用者发送消息后必须等待消息返回，才可继续执行自己的操作。
@@ -750,11 +757,11 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    状态图有初态、终态与中间状态3种状态。一个状态图只能有一个初态，终态则可以有多个。
 
-   ![image-20220108084819616](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108084819616.png)
+   ![image-20220108084819616](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108084819616.png)
 
    一个状态由状态名、状态变量和活动3个部分组成。状态变量和活动是可选的。前者表示对象在该状态时的属性值，后者表示该状态时要执行的操作。
 
-   ![image-20220108085124308](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108085124308.png)
+   ![image-20220108085124308](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108085124308.png)
 
 2. 状态转移
 
@@ -780,7 +787,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    状态图可以给其他状态图发送消息。可以通过动作（在发送子句指定接收者）或者状态图间用虚线箭头表示。后者必须用矩形框把状态图中所有对象组合在一起。
 
-   ![image-20220108090452416](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108090452416.png)
+   ![image-20220108090452416](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108090452416.png)
 
 ##### 4.4.3 时序图和协作图
 
@@ -788,7 +795,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    时序图(sequence diagram)用来描述对象之间的动态交互。体现对象间消息传递的时间顺序。它以垂直轴表示时间，水平轴表示不同的对象。
 
-   ![image-20220108091532083](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108091532083.png)
+   ![image-20220108091532083](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108091532083.png)
 
    时序图中的消息可以是信号(signal)或操作调用。收到消息时，接收对象即开始活动，表名对象被激活，通过在对象生命线上显示一个细长矩形框来表示激活。
 
@@ -796,7 +803,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    协作图(collaboration diagram)用于描述相互协作的对象间的交互和链接。虽然时序图也可用来描述对象间的交互，但侧重点不同。时序图着重于时间顺序，协作图着重于对象之间的连接。
 
-   ![image-20220108091928558](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108091928558.png)
+   ![image-20220108091928558](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108091928558.png)
 
 ##### 4.4.4 活动图
 
@@ -804,7 +811,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
 活动图中动作状态之间的迁移不是靠事件触发，活动图中一个活动结束后就将立即进入下一个活动。
 
-![image-20220108093205411](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108093205411.png)
+![image-20220108093205411](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108093205411.png)
 
 1. 活动和转移
 
@@ -838,7 +845,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
 + **业务需求**。客户或市场的高层次目标要求。
 + **用户需求**。从用户使用角度描述软件产品必须完成的任务。一般用用例模型文档描述。
-+ **功能需求**。定义软件开发人员必须实现的软件功能。是用户需求在系统上的具体反应，刺尻的角度从用户转换到了开发者。
++ **功能需求**。定义软件开发人员必须实现的软件功能。是用户需求在系统上的具体反应，思考的角度从用户转换到了开发者。
 
 ##### 5.1.2 软件需求的特性
 
@@ -857,12 +864,12 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
 ##### 5.2.1 需求分析的步骤
 
-![image-20220108095435486](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108095435486.png)
+![image-20220108095435486](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108095435486.png)
 
 软件需求分析一般包括如上图的四个步骤：
 
 + 需求获取，从分析当前系统包含的数据开始。需要与用户交流，从用户收集功能需求，在考虑对质量要求和是否可复用已有软件。
-+ 需求建模，主要任务是建立需求模型，图形化模型是可视化地说明软件需求地最好手段。常用模型：用例图、数据流图、实体联系图、控制流图、状态转换图。
++ 需求建模，主要任务是建立需求模型，图形化模型是可视化地说明软件需求的最好手段。常用模型：用例图、数据流图、实体联系图、控制流图、状态转换图。
 + 需求描述（即编写SRS），任务是编写软件需求规格说明书（SRS），必须使用统一格式的文档进行描述。编写SRS应该指明需求来源并为每项需求注上标号。
 + 需求验证：确保需求规格说明书可作为软件设计和最终系统验收的依据。
 
@@ -876,7 +883,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    该模型主要由三部分组成：包括数据流图和加工规格说明的**功能模型**、主要由数据字典和E-R图等组成的**数据模型**、由状态转换图、控制流图和控制规格说明等组成的**行为模型**。
 
-   ![image-20220108100721963](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108100721963.png)
+   ![image-20220108100721963](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108100721963.png)
 
 2. 面向对象需求模型
 
@@ -888,7 +895,7 @@ UML中，用带有箭头的线段将消息的发送者和接收者联系起来�
 
    此外还有补充规约和术语表辅助描述该需求模型。
 
-   ![image-20220108101358313](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108101358313.png)
+   ![image-20220108101358313](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108101358313.png)
 
    本质上看，需求模型是站在用户的角度从系统外部来描述系统的功能的。
 
@@ -937,7 +944,7 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
 2. OOA的模型
 
-   ![image-20220108104054484](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108104054484.png)
+   ![image-20220108104054484](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108104054484.png)
 
    OOA模型核心是以用例模型为主题的需求模型。获得软件需求后，可以定义如图所示的三种子模型。
 
@@ -971,7 +978,7 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
    面向对象软件开发过程如图所示
 
-   ![image-20220108104704621](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108104704621.png)
+   ![image-20220108104704621](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108104704621.png)
 
    面向对象的开发全过程其实是OOA、OOD、OOP和OOT的迭代过程。
 
@@ -985,14 +992,14 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
 1. 分析类的类型
 
-   分析类被划分为3种类型：**边界类**、**控制类**和**实体类**，分别用标记<<boundary>>、<<control>>和<<entity>>标识。
+   分析类被划分为3种类型：**边界类**、**控制类**和**实体类**，分别用标记\<\<boundary\>\>、\<\<control\>\>和\<\<entity\>\>标识。
 
    + 边界类是对参与者或外部交互协议的接口。一个系统可能有多种边界类
      + 用户界面类
      + 系统接口类
      + 设备接口类
    + 控制类用于封装一个或几个用例所特有的流程控制行为。
-   + 实体类用于对必须存储的信息和相关的行为建模。主要职责是储存和管理系统种的信息。通常具有持久性。
+   + 实体类用于对必须存储的信息和相关的行为建模。主要职责是储存和管理系统中的信息。通常具有持久性。
 
 2. 查找分析类
 
@@ -1006,7 +1013,7 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
    时序图按时间顺序描述系统元素间的交互。时序图中需要有这个用例出的参与者、边界类对象、控制类对象、实体类对象，这四类对象按序加入，因为每个用例都应当是参与者触发的，按顺序依次调用各类图。
 
-   按笔者的实际体会感受来说，时序图的绘画并没有什么技巧可言，按照你对用力的理解，把每次消息传递当作：“调用这个类的一个方法”看待，画图即可。
+   按笔者的实际体会感受来说，时序图的绘画并没有什么技巧可言，按照你对用例的理解，把每次消息传递当作：“调用这个类的一个方法”看待，画图即可。
 
 2. 协作图
 
@@ -1018,7 +1025,7 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
    该段文字的含义与我在时序图末尾的个人感受基本一致。一条消息的接收者通过承担响应的职责（这里还不是一个类的操作，但投射到软件设计中就是类中需要有这个方法）来作为对消息发出者的回应。
 
-   ![image-20220108110124367](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108110124367.png)
+   ![image-20220108110124367](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108110124367.png)
 
 4. 状态图
 
@@ -1040,13 +1047,13 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
    分析类图用于表现分析类及其关系，其中描述某个用例的分析类图称为参与类图（view of participating）。逻辑上，每个用例对应一张完整的参与类图。
 
-   ![image-20220108122519228](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108122519228.png)
+   ![image-20220108122519228](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108122519228.png)
 
 4. 分析类的合并
 
    对于整个系统而言，需要合并分析类，把具有相似行为的类合并为一个。每当更新一个类，就要更新或补充用例规约，必要时更新原始需求。
 
-   ![image-20220108122631886](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108122631886.png)
+   ![image-20220108122631886](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108122631886.png)
 
 ### 第七章 面向对象设计
 
@@ -1111,13 +1118,13 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
       内聚是从功能的角度对模块内部聚合能力的量度。以下分为7类的模块，从左到右内聚能力逐步增强。
 
-      ![image-20220108131957450](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108131957450.png)
+      ![image-20220108131957450](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108131957450.png)
 
    2. 耦合
 
       耦合是对软件不同模块间联系的度量，同样分为7类：
 
-      ![image-20220108132047456](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108132047456.png)
+      ![image-20220108132047456](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108132047456.png)
 
       耦合越弱，表名模块的独立性越强。但实际工作中，中等甚至较强的耦合不可能也不必完全禁用。但强耦合（一个模块直接调用另一个模块的数据等）应该尽量不用。
 
@@ -1125,7 +1132,7 @@ SRS包括引言、信息描述、功能描述、行为描述、质量保证、�
 
 ##### 7.2.1 面向对象设计模型
 
-![image-20220108132809383](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108132809383.png)
+![image-20220108132809383](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108132809383.png)
 
 ##### 7.2.2 面向对象设计的任务
 
@@ -1172,7 +1179,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
 进行具体元素设计之前，首先需要确定系统高层结构，为后续设计提供一个公共的基础方案。
 
-设计系统高层结构时可以选用架构模式(layers,model-view-control-pipes and filters,blackboard等)作为模板来定义系统高层框架。
+设计系统高层结构时可以选用架构模式(layers,model-view-control,pipes and filters,blackboard等)作为模板来定义系统高层框架。
 
 一种针对中大型软件的典型分层方法，包括4个层次：
 
@@ -1181,7 +1188,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 + 中间件层
 + 系统软件层
 
-![image-20220108135035540](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108135035540.png)
+![image-20220108135035540](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108135035540.png)
 
 ##### 7.3.2 确定设计元素
 
@@ -1236,7 +1243,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
 类图的设计一般依赖于时序图，在设计好类的属性和方法后，还需要定义类之间的依赖关系。
 
-![image-20220108141931995](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108141931995.png)
+![image-20220108141931995](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108141931995.png)
 
 设计类还应该加以改进来处理适应编程语言、提高性能、处理错误等非功能性需求。
 
@@ -1250,7 +1257,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
 编码目的是使用选定的程序设计语言，把设计模型翻译为用该语言书写的源程序。
 
-![image-20220108142728875](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108142728875.png)
+![image-20220108142728875](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108142728875.png)
 
 程序员需要养成良好的编码的风格，而且要十分熟悉使用的语言。
 
@@ -1304,7 +1311,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 + 目的：定位和纠正错误
 + 任务：消除软件故障，保证程序的可靠运行
 
-![image-20220108144258240](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108144258240.png)
+![image-20220108144258240](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108144258240.png)
 
 ##### 8.4.2 测试的特性
 
@@ -1315,7 +1322,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
 ##### 8.4.3 测试的种类
 
-![image-20220108144953828](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108144953828.png)
+![image-20220108144953828](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108144953828.png)
 
 ##### 8.4.4 测试的文档
 
@@ -1337,13 +1344,13 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
    划分等价类不仅要考虑有效等价类，还要考虑无效等价类。若干个无效等价类的测试用例不能合并。
 
-   ![image-20220108145826952](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108145826952.png)
+   ![image-20220108145826952](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108145826952.png)
 
 2. 边界值分析法（boundary value analysis）
 
    由于程序员处理边界情况时常常发生疏忽，因此在边界值附近程序出错概率较大。等价分类法的测试数据在各个等价类允许的值域内任意选取，而边界值分析的测试数据必须在边界值附近选取。
 
-   ![image-20220108150227494](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108150227494.png)
+   ![image-20220108150227494](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108150227494.png)
 
 3. 错误猜测法
 
@@ -1361,7 +1368,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
    通用流程图来设计测试用例，考察的重点是图中的判定框。
 
-   ![image-20220108151323277](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108151323277.png)
+   ![image-20220108151323277](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108151323277.png)
 
 2. 路径测试法
 
@@ -1372,7 +1379,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
    + 顺序执行的多个节点可以合并成一个节点
    + 符合条件的判定框，应该先分解成几个简单条件判定框，再画程序图
 
-   ![image-20220108151657099](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108151657099.png)
+   ![image-20220108151657099](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108151657099.png)
 
    路径测试就是对程序图种每一条可能的程序执行路径至少测试一次。路径覆盖包含了点覆盖和边覆盖。
 
@@ -1406,7 +1413,7 @@ OOD的软件设计也可划分为两个层次：系统架构设计和系统元�
 
 按照软件工程的观点，多模块程序的测试共包括4个层次。
 
-![image-20220108153201792](https://www.peteralbus.com:8440/assets/blog/imgs/blogimg/image-20220108153201792.png)
+![image-20220108153201792](https://file.peteralbus.com/assets/blog/imgs/blogimg/image-20220108153201792.png)
 
 + 单元测试：应在编码阶段完成。单元一般以模块或子程序为单位。是测试的基础。单元测试发现错误约占总错误数的65%。
 + 集成测试：将经过单元测试的模块逐步组装成具有良好一致性的完整的程序。
